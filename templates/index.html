@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>오늘의 추천픽</title>
+</head>
+<body>
+    <h1>오늘의 추천픽</h1>
+    <table border="1">
+        <tr>
+            <th>경기</th>
+            <th>추천</th>
+            <th>확률</th>
+            <th>배당</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row['경기'] }}</td>
+            <td>{{ row['추천'] }}</td>
+            <td>{{ row['확률'] }}</td>
+            <td>{{ row['배당'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
